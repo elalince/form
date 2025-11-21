@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/head.html',{
+    "title":""
+    })
+<body>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<div class="slider">
+    <div class="slider__title">
+        Вопросы-ответы
+    </div>
+  <div class="swiper slider__list">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slider__item slide">
+        <div class="slide__person">
+          <div
+            class="slide__image"
+            style="background-image: url(img/example.png);"
+          ></div>
+          <div class="slide__description">
+            <div class="slide__name">Имя Фамилия</div>
+            <div class="slide__info">психолог Поговорим.Онлайн</div>
+          </div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__question">
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown?
+          </div>
+          <div class="slide__answer">
+            “Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only
+            five centuries.”
+          </div>
+        </div>
+      </div>
+        <div class="swiper-slide slider__item slide">
+        <div class="slide__person">
+          <div
+            class="slide__image"
+            style="background-image: url(img/example.png);"
+          ></div>
+          <div class="slide__description">
+            <div class="slide__name">Имя Фамилия</div>
+            <div class="slide__info">психолог Поговорим.Онлайн</div>
+          </div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__question">
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown?
+          </div>
+          <div class="slide__answer">
+            “Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only
+            five centuries.”
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide slider__item slide">
+        <div class="slide__person">
+          <div
+            class="slide__image"
+            style="background-image: url(img/example.png);"
+          ></div>
+          <div class="slide__description">
+            <div class="slide__name">Имя Фамилия</div>
+            <div class="slide__info">психолог Поговорим.Онлайн</div>
+          </div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__question">
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown?
+          </div>
+          <div class="slide__answer">
+            “Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only
+            five centuries.”
+            “Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only
+            five centuries.”
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="slider__controls">
+    <a class="slider-button-prev">
+        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 0.959961L1 8.95996L9 16.96" stroke="#1D2218" />
+            </svg>
+    </a>
+    <div class="slider__fraction"><span class="current">1</span>/<span class="total">0</span></div>
+    <a class="slider-button-next">
+        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 16.96L9 8.95996L1 0.95996" stroke="#1D2218" />
+        </svg>
+    </a>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+html.no-scroll {
+  overflow: hidden;
+}
+
+body {
+  font-optical-sizing: auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  position: relative;
+  -webkit-text-size-adjust: none;
+  margin: 0;
+  background: #f9f8ff;
+  min-width: 375px;
+  overflow-x: hidden;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.1s ease 0s;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1238px;
+  padding: 30px 0;
+}
+@media (max-width: 767px) {
+  .slider {
+    padding: 15px 0;
+  }
+}
+.slider__title {
+  font-family: Unbounded, sans-serif;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 100%;
+  text-align: center;
+  color: #1d2218;
+  margin-bottom: 25px;
+}
+@media (max-width: 767px) {
+  .slider__title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+}
+.slider__list {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  width: 100%;
+  padding: 15px !important;
+}
+.slider__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 105px;
+  height: 40px;
+  border-radius: 100px;
+  background: #fff;
+  padding: 8px 12px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  color: #1d2218;
+  font-family: "Gilroy", sans-serif;
+  margin-top: 5px;
+}
+.slider__controls a {
+  height: 18px;
+}
+.slider .slide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 40px;
+  height: 361px;
+  box-shadow: 0 5px 20px 0 #eeecfa;
+  background: #fff;
+  padding: 30px;
+  max-width: calc(50% - 10px);
+}
+@media (max-width: 767px) {
+  .slider .slide {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    gap: 15px;
+    border-radius: 30px;
+    height: 339px;
+  }
+}
+.slider .slide__person {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .slider .slide__person {
+    gap: 15px;
+  }
+}
+.slider .slide__image {
+  width: 90px;
+  min-width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  .slider .slide__image {
+    width: 75px;
+    min-width: 75px;
+    height: 75px;
+  }
+}
+.slider .slide__description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: #1d2218;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .slider .slide__description {
+    font-size: 17px;
+    color: #1e1e1e;
+  }
+}
+.slider .slide__name {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .slider .slide__name {
+    font-size: 16px;
+  }
+}
+.slider .slide__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 185px;
+  max-height: 185px;
+  padding-right: 10px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #1d2218 #f9f8ff;
+}
+@media (max-width: 767px) {
+  .slider .slide__content {
+    gap: 15px;
+    height: 215px;
+    max-height: 215px;
+  }
+}
+.slider .slide__content::-webkit-scrollbar {
+  width: 4px;
+}
+.slider .slide__content::-webkit-scrollbar-track {
+  background: #f9f8ff;
+  border-radius: 3px;
+}
+.slider .slide__content::-webkit-scrollbar-thumb {
+  background: #1d2218;
+  border-radius: 3px;
+}
+.slider .slide__content::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+.slider .slide__question {
+  font-family: Unbounded, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #1d2218;
+}
+@media (max-width: 767px) {
+  .slider .slide__question {
+    font-size: 16px;
+  }
+}
+.slider .slide__answer {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #1d2218;
+}
+@media (max-width: 767px) {
+  .slider .slide__answer {
+    font-size: 17px;
+    line-height: 110%;
+    color: #1e1e1e;
+  }
+}
+</style>
+<script>
+  const swiper = new Swiper(".slider__list", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".slider-button-next",
+      prevEl: ".slider-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+    },
+    on: {
+      init: function () {
+        document.querySelector(".slider__fraction .total").textContent =
+          this.slides.length;
+        document.querySelector(".slider__fraction .current").textContent =
+          this.realIndex + 1;
+      },
+      slideChange: function () {
+        document.querySelector(".slider__fraction .current").textContent =
+          this.realIndex + 1;
+      },
+    },
+  });
+</script>
+</body>
+</html>

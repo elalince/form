@@ -311,7 +311,6 @@ content: '✔';
   border-color: #e04424;
 }
 
-/* Loading overlay */
 .form.is-submitting {
   opacity: 0.9;
 }
@@ -395,24 +394,19 @@ content: '✔';
     height: 80px;
     font-size: 24px; 
   }
-
-
 }
 
-/* отключаем подсказки автозаполнения (частично) */
 form, input, textarea {
   autocomplete: off;
 }
 
-/* переопределяем стили автозаполненных полей в Chromium-based браузях */
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-  -webkit-text-fill-color: #fff !important; /* цвет текста */
-  transition: background-color 5000s ease-in-out 0s !important; /* предотвращает мерцание фонового цвета */
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
 
-/* если нужно — строгая установка цвета плейсхолдера/текста */
 input:-webkit-autofill::placeholder,
 textarea:-webkit-autofill::placeholder {
   color: rgba(255,255,255,0.6) !important;

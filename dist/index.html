@@ -1,480 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover,maximum-scale=1,user-scalable=0">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </head>
-<body>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover,maximum-scale=1,user-scalable=0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-  <div class="form">
-    <div class="form__title">Подать заявку</div>
-    <div class="form__subtitle">Оставь заявку — получи гарантированный ответ</div>
-    <form method="POST" class="form__container">
-      <div class="form__block">
-        <label>ФИО</label>
-        <input type="text" required>
+<body>
+  
+  <div class="restaurants">
+    <div class="restaurants__rating">
+      <div class="rating rating--3">
+        <div class="rating__button"><img src="img/rating-3.png"></div>
       </div>
-      <div class="form__block">
-        <label>Телефон</label>
-        <input type="tel" required>
+      <div class="rating rating--2">
+        <div class="rating__button"><img src="img/rating-2.png"></div>
       </div>
-      <div class="form__block">
-        <label>Электронная почта</label>
-        <input type="email" required>
+      <div class="rating rating--1">
+        <div class="rating__button"><img src="img/rating-1.png"></div>
       </div>
-      <div class="form__block">
-        <label>ВУЗ, полное наименование</label>
-        <input type="text" required>
+      <div class="rating rating--special">
+        <div class="rating__button">Cпециальная номинация</div>
+        </div>
+    </div>
+    <div class="restaurants__lists">
+      <div class="restaurants__list restaurants__list--3">
+        <a class="restaurants__item" data-name="restaurant-1">Padron</a>
+        <a class="restaurants__item" data-name="restaurant-2">Oltremare</a>
+        <a class="restaurants__item" data-name="restaurant-3">Olluco</a>
+        <a class="restaurants__item" data-name="restaurant-4">Dr. Живаго</a>
+         <a class="restaurants__item" data-name="restaurant-1">Padron</a>
+        <a class="restaurants__item" data-name="restaurant-2">Oltremare</a>
+        <a class="restaurants__item" data-name="restaurant-3">Olluco</a>
+        <a class="restaurants__item" data-name="restaurant-4">Dr. Живаго</a>
+         <a class="restaurants__item" data-name="restaurant-1">Padron</a>
+        <a class="restaurants__item" data-name="restaurant-2">Oltremare</a>
+        <a class="restaurants__item" data-name="restaurant-3">Olluco</a>
       </div>
-      <div class="form__block">
-        <label>Город проживания</label>
-        <input type="text" required>
+      <div class="restaurants__list restaurants__list--2">
+        <a class="restaurants__item" data-name="restaurant-1">Padron</a>
+        <a class="restaurants__item" data-name="restaurant-2">Oltremare</a>
+        <a class="restaurants__item" data-name="restaurant-3">Olluco</a>
+        <a class="restaurants__item" data-name="restaurant-4">Dr. Живаго</a>
       </div>
-      <div class="form__block">
-        <label>Направление обучения</label>
-        <input type="text" required>
+      <div class="restaurants__list restaurants__list--1">
+        <a class="restaurants__item" data-name="restaurant-1">Padron</a>
+        <a class="restaurants__item" data-name="restaurant-2">Oltremare</a>
+        <a class="restaurants__item" data-name="restaurant-3">Olluco</a>
+        <a class="restaurants__item" data-name="restaurant-4">Dr. Живаго</a>
+        <a class="restaurants__item" data-name="restaurant-1">Padron</a>
+        <a class="restaurants__item" data-name="restaurant-2">Oltremare</a>
+        <a class="restaurants__item" data-name="restaurant-3">Olluco</a>
+        <a class="restaurants__item" data-name="restaurant-4">Dr. Живаго</a>
       </div>
-      <div class="form__block form__block--full">
-        <label>Бакалавриат/магистратура/специалитет</label>
-        <input type="text" required>
+      <div class="restaurants__list restaurants__list--special">
+        <a class="restaurants__item" data-name="restaurant-1">Padron</a>
+        <a class="restaurants__item" data-name="restaurant-2">Oltremare</a>
+        <a class="restaurants__item" data-name="restaurant-3">Olluco</a>
+        <a class="restaurants__item" data-name="restaurant-4">Dr. Живаго</a>
       </div>
-      <div class="form__block">
-        <label>Опишите суть вашей идеи/проекта</label>
-        <textarea required></textarea>
-      </div>
-      <div class="form__block">
-        <label>Каким образом ваша идея/проект может зарабатывать?</label>
-        <textarea required></textarea>
-      </div>
-      <div class="form__block">
-        <label>Есть ли у вас уже реализованное демо вашей идеи?</label>
-        <textarea required></textarea>
-      </div>
-      <div class="form__block">
-        <label>Какой аудитории интересен ваш проект?</label>
-        <textarea required></textarea>
-      </div>
-      <div class="form__block">
-        <label>Есть ли у вашей идеи/бизнес-план? (необязательно)</label>
-        <textarea></textarea>
-      </div>
-      <div class="form__block">
-        <label>Если да, то укажите срок, прогноз затрат и выручки </label>
-        <textarea></textarea>
-      </div>
-      <div class="form__block form__block--full">
-        <label>Загрузите одним файлом презентацию вашей идеи или проекта, бизнес-план (необязательно)</label>
-        <div class="file-input-wrapper">
-          <input type="text" class="fake-file-input" readonly>
-          <input type="file" class="real-file-input" name="presentation">
+    </div>
+    <div class="restaurants__popup">
+      <div class="restaurants__popup-content">
+        <a class="restaurants__popup-close" href="#"><img src="img/close.svg"></a>
+
+        <div class="restaurants__swiper">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide restaurants__slide restaurant" data-slide="restaurant-1">
+                <div class="restaurant__content">
+                  <div class="restaurant__header">
+                    <div class="restaurant__rating">
+                        <img src="img/rating-3.png">
+                    </div>
+                    <div class="restaurant__title">Padron</div>
+                  </div>
+                  <div class="restaurant__info">
+                    <div class="restaurant__info-item">
+                      <label>Кухня:</label>
+                      <div>Испано-португальская кухня</div>
+                    </div>
+                    <div class="restaurant__info-item">
+                      <label>Шеф:</label>
+                      <div>Евгений Цыганов, Адриан Кетглас</div>
+                    </div>
+                    <div class="restaurant__info-item">
+                      <label>Адрес:</label>
+                      <div>Страстной бул., 7, стр. 1</div>
+                    </div>
+                    <div class="restaurant__info-item">
+                      <label>Сайт:</label>
+                      <div>https://padron-rest.ru/</div>
+                    </div>
+                    <div class="restaurant__info-item">
+                      <label>Средний чек:</label>
+                      <div>7 000 р.</div>
+                    </div>
+                  </div>
+                  <div class="restaurant__images">
+                    <div class="restaurant__image"><img src="img/restaurant-1-1.png"></div>
+                    <div class="restaurant__image"><img src="img/restaurant-1-1.png"></div>
+                    <div class="restaurant__image"><img src="img/restaurant-1-1.png"></div>   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="form__block form__block--full form__block--checkbox">
-        <input type="checkbox" id="agreement">
-        <label for="agreement">Согласен с условиями акселератора</label>
-      </div>
-      <div class="form__block form__block--full form__block--checkbox">
-          <input type="checkbox" id="politics">
-          <label for="politics">Согласен с политикой обработки персональных данных</label>
-      </div>
-       <div class="form__block form__block--full">
-        <button type="submit">Отправить заявку</button>
-       </div>
-    </form>
-  </div>
+  </div>    
+</div>
 
-  <div class="form__overlay" aria-hidden="true">
-    <div class="spinner" aria-hidden="true"></div>
-  </div>
-
-  <style>
-   @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  outline: none;
-}
-
-html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.3;
-  position: relative;
-  -webkit-text-size-adjust: none;
-  margin: 0;
-  overflow-x: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-a {
-  cursor: pointer;
-  color: inherit;
-  text-decoration: none;
-  transition: all 0.1s ease 0s;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-  max-width: 1440px;
-  background: #0e0040;
-  padding: 73px 60px;
-}
-
-.form__title {
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 117%;
-  color: #fff;
-}
-
-.form__subtitle {
-  font-size: 32px;
-  line-height: 125%;
-  color: #fff;
-}
-
-.form__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.form__block {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: calc((100% - 40px) / 2);
-}
-
-.form__block--full {
-  width: 100%;
-} 
-
-.form__block--checkbox {
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-}
-
-.form__block label {
-  font-size: 24px;
-  line-height: 133%;
-  letter-spacing: -0.02em;
-  color: #fff;
-}
-
-.form__block input {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  height: 80px;
-  padding: 24px;
-  border: none;
-  outline: none; 
-  font-size: 24px;
-  line-height: 133%;
-  letter-spacing: -0.02em;
-  color: #fff;
-  width: 100%;
-}
-
-
-
-.form__block textarea {
-   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  height: 160px;
-  padding: 24px;
-  resize: vertical;
-  border: none;
-  outline: none; 
-  font-size: 24px;
-  line-height: 133%;
-  letter-spacing: -0.02em;
-  color: #fff;
-  margin-top: auto;
-}
-
-.form__block input[type="file"] {
-  padding: 0 24px;
-  height: 60px;
-}
-
-.file-input-wrapper {
-  position: relative;
-}
-.file-input-wrapper .fake-file-input {
-  cursor: pointer;
-}
-.file-input-wrapper .real-file-input {
-  display: none;
-}
-
-.form__block input[type="checkbox"] {
-  width: 24px;
-  height: 24px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  border: none;
-  outline: none; 
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.form__block input[type="checkbox"] + label {
-  position: relative;
-  padding-left: 56px;
-  cursor: pointer;
-}
-
-.form__block input[type="checkbox"] + label:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background: #261953;
-  border-radius: 12px;
-}
-
-.form__block input[type="checkbox"] + label::after {
-content: '✔';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
-    transition: transform 0.2s ease;
-    opacity: 0;
-    visibility: hidden;
-}
-.form__block input[type="checkbox"]:checked + label::after {
-    opacity: 1;
-    visibility: visible;
-
-}
-
-.form__block button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 120px;
-  background: #ff522d;
-  border: 4px solid #ff522d;
-  border-radius: 20px;
-  padding: 8px;
-  outline: none; 
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 100%;
-  letter-spacing: -0.02em;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.form__block button:hover {
-  background: transparent;
-  border-color: #e04424;
-}
-
-.form.is-submitting {
-  opacity: 0.9;
-}
-.form__overlay {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.5);
-  z-index: 9999;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.2s ease, visibility 0.2s;
-}
-.form__overlay.active {
-  visibility: visible;
-  opacity: 1;
-}
-.spinner {
-  width: 56px;
-  height: 56px;
-  border: 6px solid rgba(255,255,255,0.15);
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-
-@media (max-width: 980px) {
-  .form__block {
-    width: 100%;
-  }
-}
-
-@media (max-width: 767px) {
-  .form {
-    padding: 40px 20px;
-    gap: 24px;
-  }
-  .form__title {
-    font-size: 32px;
-  }
-  .form__subtitle {
-    font-size: 24px;
-  }
-
-  .form__container {
-    gap: 24px;
-  }
-
-  .form__block label {
-    font-size: 18px;
-  }
-  .form__block input,
-  .form__block textarea {
-    font-size: 18px;
-    height: 60px;   
-    padding: 16px;
-  }
-
-   .form__block textarea {
-    height: 120px;  
-   }
-
-   .fake-file-input {
-    height: 60px;   
-   }
-
-   .form__block input[type="checkbox"] + label {
-    padding-left: 40px;
-   }
-   .form__block input[type="checkbox"] + label:before,
-   .form__block input[type="checkbox"] + label::after {
-    width: 32px;
-    height: 32px;
-   }
-
-
-  .form__block button {
-    height: 80px;
-    font-size: 24px; 
-  }
-}
-
-form, input, textarea {
-  autocomplete: off;
-}
-
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-  -webkit-text-fill-color: #fff !important;
-  transition: background-color 5000s ease-in-out 0s !important;
-}
-
-input:-webkit-autofill::placeholder,
-textarea:-webkit-autofill::placeholder {
-  color: rgba(255,255,255,0.6) !important;
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  // File input handling
-  var fake = document.querySelector('.fake-file-input');
-  var real = document.querySelector('.real-file-input');
-  if (fake && real) {
-    fake.addEventListener('click', function () { real.click(); });
-    real.addEventListener('change', function () {
-      if (real.files && real.files.length) {
-        var names = Array.from(real.files).map(function (f) { return f.name; });
-        fake.value = names.join(', ');
-      } else {
-        fake.value = '';
-      }
-    });
-  }
-
-  // Form submit handling: блокировка формы и показ лоадера
-  var form = document.querySelector('.form__container');
-  var overlay = document.querySelector('.form__overlay');
-  if (!form || !overlay) return;
-
-  var isSubmitting = false;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (isSubmitting) return;
-    isSubmitting = true;
-
-    // визуально пометить форму
-    var rootForm = document.querySelector('.form');
-    if (rootForm) rootForm.classList.add('is-submitting');
-
-    // показать оверлей
-    overlay.classList.add('active');
-
-    // отключить все контролы внутри формы
-    var controls = form.querySelectorAll('input, textarea, button, select');
-    controls.forEach(function (el) { el.disabled = true; });
-
-    // expose a global function that server-response handler will call
-    window.formSubmissionComplete = function (opts) {
-      // opts: { success: boolean, reset: boolean }
-      isSubmitting = false;
-      overlay.classList.remove('active');
-      if (rootForm) rootForm.classList.remove('is-submitting');
-      controls.forEach(function (el) { el.disabled = false; });
-
-      // optional: reset form if caller requests it
-      try {
-        if (opts && opts.reset) form.reset();
-        // clear fake file input display
-        var fakeInput = form.querySelector('.fake-file-input');
-        if (fakeInput) fakeInput.value = '';
-      } catch (err) {
-        // ignore
-      }
-    };
-
-    // Note: actual network submission should be performed by user code.
-    // This handler only blocks UI and exposes `window.formSubmissionComplete`.
-  });
-});
-</script>
+    
 </body>
 </html>

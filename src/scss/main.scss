@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Belarus-Regular';
   src: url('../fonts/Gilroy-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
@@ -18,6 +18,13 @@
   font-family: 'Gilroy';
   src: url('../fonts/Gilroy-SemiBold.ttf') format('truetype');
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Belarus-Regular';
+  src: url('../fonts/Belarus-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -42,18 +49,23 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-optical-sizing: auto;
-  color: #2e2e2e;
-  font-size: 14px;
+  color: #fff;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.3;
   position: relative;
   -webkit-text-size-adjust: none;
   margin: 0;
-  background: #f9f8ff;
+  background: #000;
   min-width: 375px;
+  height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -102,194 +114,140 @@ h1, h2, h3 {
   margin: 0;
 }
 
-.slider {
+.restaurants {
+  width: 100%;
+  max-width: 1042px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1238px;
-  padding: 30px 0;
+  gap: 40px;
+  padding: 16px;
 
-  @media (max-width: 767px) {
-    padding: 15px 0;
-  }
-
-  &__title {
-    font-family: Unbounded, sans-serif;
-    font-weight: 400;
-    font-size: 46px;
-    line-height: 100%;
-    text-align: center;
-    color: #1d2218;
-    margin-bottom: 25px;
-
-    @media (max-width: 767px) {
-      font-size: 30px;
-      margin-bottom: 30px;
-    }
-  }
-
-  &__list {
+  &__rating {
     display: flex;
-    align-items: stretch;
-    gap: 30px;
-    width: 100%;
-    padding: 15px !important;
-  }
-
-  &__controls {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 105px;
-    height: 40px;
-    border-radius: 100px;
-    background: #fff;
-    padding: 8px 12px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 130%;
-    text-align: center;
-    color: #1d2218;
-    font-family: "Gilroy", sans-serif;
-    margin-top: 5px;
+    gap: 14px;
+    
 
-    a {
-      height: 18px;
-    }
-  }
-
-  .slide  {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border-radius: 40px;
-    height: 361px;
-    box-shadow: 0 5px 20px 0 #eeecfa;
-    background: #fff;
-    padding: 30px;
-    max-width: calc(50% - 10px);
-
-    @media (max-width: 767px) {
-      width: 100%;
-      max-width: 100%;
-      padding: 15px;
-      gap: 15px;
-      border-radius: 30px;
-      height: 339px;
-    }
-
-    &__person {
+    .rating {
+      flex: 1;
+      max-width: 163px;
       display: flex;
       align-items: center;
-      gap: 20px;
+      justify-content: flex-start;
 
-      @media (max-width: 767px) {
-        gap: 15px;
-      }
-    }
+      &--special {
+        max-width: 172px;
+        font-family: 'Belarus-Regular', sans-serif;
+        font-size: 35px;
+        line-height: 90%;
+        color: #fbc010;
 
-    &__image {
-      width: 90px;
-      min-width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+          @media (max-width: 768px) {
+            font-family: "Gilroy", sans-serif;
+            font-size: 9px;
+            line-height: 100%;
+            text-align: center;
 
-      @media (max-width: 767px) {
-        width: 75px;
-        min-width: 75pxx;
-        height: 75px;
-      }
-    }
-
-    &__description {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      font-family: "Gilroy", sans-serif;
-      font-size: 18px;
-      letter-spacing: 0.05em;
-      color: #1d2218;
-      font-weight: 400;
-
-      @media (max-width: 767px) {
-         font-size: 17px;
-      }
-    }
-
-    &__name {
-      font-weight: 600;
-      text-transform: uppercase;
-
-      @media (max-width: 767px) {
-         font-size: 16px;
-      }
-    }
-
-    &__content {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      height: 185px;
-      max-height: 185px;
-      padding-right: 10px;
-      overflow-y: auto;
-
-      @media (max-width: 767px) {
-        gap: 15px;
-        height: 215px;
-        max-height: 215px;
-      }
-
-       &::-webkit-scrollbar {
-            width: 4px;
+            .rating__button {
+             max-width: 83px;
+            }
         }
-        &::-webkit-scrollbar-track {
-            background: #f9f8ff;
-            border-radius: 3px;
-        }
-        &::-webkit-scrollbar-thumb {
-            background: #1d2218;
-            border-radius: 3px;
-        }
-        &::-webkit-scrollbar-button {
-            display: none;
-            height: 0;
-            width: 0;
-        }
-        scrollbar-width: thin;
-        scrollbar-color: #1d2218 #f9f8ff;
       }
 
-      &__question {
-        font-family: Unbounded, sans-serif;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 130%;
-        letter-spacing: 0.01em;
-        color: #1d2218;
-        @media (max-width: 767px) {
-         font-size: 16px;
-      }
+      &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+          width: auto;
+          height: 60px;
+
+            @media (max-width: 768px) {
+              height: 60px;
+              border: 1.24px solid #fbc010;
+              border-radius: 12px;
+              background: #181818;
+              padding: 7px;
+
+              &--active {
+                background: rgba(251, 192, 16, 0.2);
+              }
+
+              img {
+                height: 46px;
+              }
+          }
       }
 
-      &__answer {
-        font-family: "Gilroy", sans-serif;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 130%;
-        color: #1d2218;
-
-        @media (max-width: 767px) {
-         font-size: 16px;
-         line-height: 100%;
-         color: #1e1e1e;
-      }
-      }
+      
+    }
   }
 
+  &__lists {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      flex: 1;
+      max-width: 163px;
+
+      &--special {
+        max-width: 172px;
+      }
+    }
+
+    &__item {
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &__popup {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+
+      
+      &-content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &--hidden {
+        display: none;
+      }
+ 
+    }
+    
+      &__swiper {
+        width: 100%; 
+        height: 100%;
+
+              .restaurant {
+                border: 1px solid #f0b242;
+                padding: 40px;
+                background: #181818;
+                width: 100%;
+                max-width: 921px;
+              }
+      }
 }
